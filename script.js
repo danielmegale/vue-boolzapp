@@ -7,8 +7,8 @@ const app=Vue.createApp({
             user: {
                 name: 'Nome Utente',
                 avatar: '_io'
-              },
-              contacts: [
+            },
+            contacts: [
                 {
                   id: 1,
                   name: 'Michele',
@@ -199,7 +199,17 @@ const app=Vue.createApp({
                     }
                   ],
                 }
-              ]
+            ],
+            currentContact:{
+                name: 'Michele',
+                avatar: '_1',
+              },
+        }
+    },
+    methods:{
+        currentChat(contact){
+            this.currentContact.name = contact.name;
+            this.currentContact.avatar=contact.avatar;
         }
     }
 });

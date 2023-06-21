@@ -42,7 +42,7 @@
             </div>
             <!-- Contacts -->
             <div class="contacts">
-                <div v-for="contact in contacts" class="contact"@click="">
+                <div v-for="(contact,i) in contacts" class="contact" @click="currentChat(contact)">
                     <img :src=`img/avatar${contact.avatar}.jpg` alt="">
                     <p>{{contact.name}}</p>
                 </div>
@@ -52,10 +52,10 @@
             <!--Header Chat -->
             <header class="chat">
                 <div class="d-flex-center">
-                    <img :src=`img/avatar$.jpg` alt="">
+                    <img :src=`img/avatar${currentContact.avatar}.jpg` alt="">
                     <div>
-                        <p>nome</p>
-                        <p>udnfk</p>
+                        <p>{{currentContact.name}}</p>
+                        <p></p>
                     </div>
                 </div>
                 <div>
