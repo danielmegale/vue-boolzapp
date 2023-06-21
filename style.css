@@ -12,29 +12,45 @@ body{
 main{
     height: 97vh;
     width: 80%;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     display: flex;
     margin: 15px auto;
 }
+img{
+    max-width: 100%;
+    border-radius: 50%;
+    height: 50px;
+    padding-bottom: 5px;
+    display: inline;
+}
 .sidebar{
     height: 100%;
-    width: 30%;
-    border: 2px solid red;
+    width: 40%;
+    /* border: 2px solid red; */
 }
 .id{
-    height: 5%;
+    /* height: 5%; */
     background-color: #EAEAEA;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
 }
 .notification{
-    height: 5%;
+    /* height: 5%; */
     background-color: #8EDAFC;
 }
 .searchbar{
-    height: 3%;
+    /* height: 3%; */
     background-color: #fafafa1d;
 }
 .contacts{
-    height: 87%;
+    /* height: 87%; */
     background-color:#FAFAFA;
+    overflow: auto;
 }
 /* Utilitis */
+.d-flex-center{
+    display: flex;
+    align-items: center;
+}
