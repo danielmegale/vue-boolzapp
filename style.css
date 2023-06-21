@@ -22,13 +22,13 @@ img{
     border-radius: 50%;
     height: 50px;
     padding: 5px;
-    display: inline;
+    display: block;
 }
 .sidebar{
     height: 100%;
     width: 40%;
     background-color: #FFF;
-    /* border: 2px solid red; */
+    border-right: 2px solid black;
 }
 /* User */
 .id{
@@ -47,7 +47,6 @@ img{
 .notification{
     background-color: #8EDAFC;
     padding: 10px;
-
 }
 .fa-stack .fa-circle{
     color:#F2FBFF;
@@ -90,6 +89,62 @@ img{
 .chat{
     background-color: #EAEAEA;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+.chat .fa-solid{
+    color: #B1B1B1;
+    padding: 10px;
+}
+/* Main chat */
+.main-chat{
+    height: calc(100% - 100px);
+    background-image: url(img/mine.jpg);
+    overflow: auto;
+}
+.message{
+    display: flex;
+}
+
+.main-chat div{
+    padding: 10px;
+}
+.main-chat p{
+    padding: 5px 5px 15px;
+    border-radius: 5px;
+    max-width: 50%;
+    position: relative;
+}
+.sent{
+    background-color:#D5F9BA;
+}
+.received{
+    background-color:#fff ;
+}
+.date{
+    position: absolute;
+    bottom:0px;
+    right:5px;
+    font-size: 10px;
+    color: gray;
+    
+}
+.text{
+    height: 50px;
+    background-color: #EAEAEA;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.text input{
+    width: 100%;
+    margin: 0 10px;
+    border: 0;
+    border-radius: 9px;
+    min-height: 25px;
 }
 /* Utilitis */
 .d-flex-center{
@@ -103,4 +158,13 @@ img{
 }
 .pl-10{
     padding-left: 10px;
+}
+i{
+    cursor: pointer;
+}
+.left{
+    justify-content: start;
+}
+.right{
+    justify-content: end;
 }
