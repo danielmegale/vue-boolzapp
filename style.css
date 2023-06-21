@@ -15,7 +15,6 @@ main{
     /* border: 2px solid black; */
     display: flex;
     margin: 15px auto;
-    background-color: black;
 }
 img{
     max-width: 100%;
@@ -84,7 +83,6 @@ img{
 .chats{
     width: 60%;
     height: 100%;
-    background-color: aqua;
 }
 .chat{
     background-color: #EAEAEA;

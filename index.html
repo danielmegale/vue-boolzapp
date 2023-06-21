@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <link rel="stylesheet" href="style.css">
     <!-- icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -14,8 +15,8 @@
             <!-- User -->
             <div class="id">
                 <div class="d-flex-center">
-                    <img src="img/avatar_io.jpg" alt="">
-                    <span><strong>Nome Utente</strong></span>
+                    <img :src=`img/avatar${user.avatar}.jpg` alt="">
+                    <span><strong>{{user.name}}</strong></span>
                 </div>
                 <div>
                     <i class="fa-solid fa-circle-notch"></i>
@@ -34,21 +35,16 @@
                       <p class="link">Attiva notifiche desktop</p>
                   </div>
             </div>
-            <!-- searchbar -->
+            <!-- Searchbar -->
             <div class="searchbar">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <input type="text" placeholder="Cerca o inizia una nuova chat">
             </div>
+            <!-- Contacts -->
             <div class="contacts">
-                <div class="contact">
-                    <img src="img/avatar_1.jpg" alt="">
-                    <p>nome</p>
-                </div>
-                <div class="contact">
-                    <img src="img/avatar_1.jpg" alt="">
-                </div>
-                <div class="contact">
-                    <img src="img/avatar_1.jpg" alt="">
+                <div v-for="contact in contacts" class="contact"@click="">
+                    <img :src=`img/avatar${contact.avatar}.jpg` alt="">
+                    <p>{{contact.name}}</p>
                 </div>
             </div>
         </section>
@@ -56,7 +52,7 @@
             <!--Header Chat -->
             <header class="chat">
                 <div class="d-flex-center">
-                    <img src="img/avatar_1.jpg" alt="">
+                    <img :src=`img/avatar$.jpg` alt="">
                     <div>
                         <p>nome</p>
                         <p>udnfk</p>
@@ -88,5 +84,6 @@
             </div>
         </section>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
