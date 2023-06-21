@@ -15,19 +15,22 @@ main{
     /* border: 2px solid black; */
     display: flex;
     margin: 15px auto;
+    background-color: black;
 }
 img{
     max-width: 100%;
     border-radius: 50%;
     height: 50px;
-    padding-bottom: 5px;
+    padding: 5px;
     display: inline;
 }
 .sidebar{
     height: 100%;
     width: 40%;
+    background-color: #FFF;
     /* border: 2px solid red; */
 }
+/* User */
 .id{
     /* height: 5%; */
     background-color: #EAEAEA;
@@ -36,21 +39,68 @@ img{
     justify-content: space-between;
     padding: 0 10px;
 }
+.id  .fa-solid{
+    color: #B1B1B1;
+    padding: 10px;
+}
+/* Notification */
 .notification{
-    /* height: 5%; */
     background-color: #8EDAFC;
+    padding: 10px;
+
 }
+.fa-stack .fa-circle{
+    color:#F2FBFF;
+}
+.fa-stack .fa-bell-slash{
+    color: #8EDAFC;
+}
+/* Searchbar */
 .searchbar{
-    /* height: 3%; */
-    background-color: #fafafa1d;
+    background-color: #EAEAEA;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
 }
+.searchbar .fa-solid{
+    padding: 5px;
+    background-color: #fff;
+    cursor: pointer;
+}
+.searchbar input{
+    border: 0;
+    width: 100%;
+}
+/* Contacts */
 .contacts{
-    /* height: 87%; */
+    max-height: 785px;
     background-color:#FAFAFA;
     overflow: auto;
+}
+.contact{
+    border-bottom: 1px solid rgb(193, 191, 191);
+    display: flex;
+}
+/* Chats */
+.chats{
+    width: 60%;
+    height: 100%;
+    background-color: aqua;
+}
+.chat{
+    background-color: #EAEAEA;
+    width: 100%;
 }
 /* Utilitis */
 .d-flex-center{
     display: flex;
     align-items: center;
+}
+.link{
+    text-decoration: underline;
+    opacity: 0.5;
+    cursor: pointer;
+}
+.pl-10{
+    padding-left: 10px;
 }

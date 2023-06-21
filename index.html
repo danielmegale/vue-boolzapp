@@ -11,10 +11,11 @@
 <body>
     <main id="root">
         <div class="sidebar">
+            <!-- User -->
             <div class="id">
                 <div class="d-flex-center">
                     <img src="img/avatar_io.jpg" alt="">
-                    <span>Nome Utente</span>
+                    <span><strong>Nome Utente</strong></span>
                 </div>
                 <div>
                     <i class="fa-solid fa-circle-notch"></i>
@@ -22,11 +23,40 @@
                     <i class="fa-solid fa-ellipsis-vertical"></i>
                 </div>
             </div>
-            <div class="notification"></div>
-            <div class="searchbar"></div>
-            <div class="contacts"></div>
+            <!-- Notification -->
+            <div class="notification d-flex-center">
+                <span class="fa-stack">
+                    <i class="fa-solid fa-circle fa-stack-2x"></i>
+                    <i class="fa-solid fa-bell-slash fa-stack-1x fa-invers"></i>
+                  </span>
+                  <div class="pl-10">
+                      <span><strong>Ricevi notifiche di nuovi messaggi</strong></span>
+                      <p class="link">Attiva notifiche desktop</p>
+                  </div>
+            </div>
+            <!-- searchbar -->
+            <div class="searchbar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Cerca o inizia una nuova chat">
+            </div>
+            <div class="contacts">
+                <div class="contact">
+                    <img src="img/avatar_1.jpg" alt="">
+                    <p>nome</p>
+                </div>
+                <div class="contact">
+                    <img src="img/avatar_1.jpg" alt="">
+                </div>
+                <div class="contact">
+                    <img src="img/avatar_1.jpg" alt="">
+                </div>
+            </div>
         </div>
-        <div></div>
+        <div class="chats">
+            <div class="chat">
+                <img src="img/avatar_1.jpg" alt="">
+            </div>
+        </div>
     </main>
 </body>
 </html>
