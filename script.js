@@ -236,12 +236,21 @@ const app=Vue.createApp({
         newMsg(){
           if(!this.newMessage.length)return
           this.currentContact.messages.push({
-            id:2434,
+            id:this.currentContact.messages.length+1,
             date:this.newDate(),
             message: this.newMessage,
             status:'sent',
           })
           this.newMessage='';
+          setTimeout(() => {
+            const replayMessage={
+              id:this.currentContact.messages.length+1,
+              date:this.newDate(),
+              message:'ok',
+              status:'received',
+            };
+            this.currentContact.messages.push(replayMessage)
+          },1000);
         },
         newDate(){
           const now= new Date();
@@ -255,7 +264,7 @@ const app=Vue.createApp({
           const time=`${hours}:${Minutes}:${seconds}`; 
           const date=`${today}  ${time}`;
           return date;
-        }
+        },
     }
 });
 app.mount('#root');
