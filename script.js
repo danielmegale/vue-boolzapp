@@ -221,9 +221,10 @@ const app=Vue.createApp({
                   date: '10/01/2020 16:15:22',
                   message: 'Tutto fatto!',
                   status: 'received'
-                }
+                },
               ],
             },
+          newMessage:'',
         }
     },
     methods:{
@@ -231,6 +232,29 @@ const app=Vue.createApp({
             this.currentContact.name = contact.name;
             this.currentContact.avatar=contact.avatar;
             this.currentContact.messages=contact.messages
+        },
+        newMsg(){
+          if(!this.newMessage.length)return
+          this.currentContact.messages.push({
+            id:2434,
+            date:this.newDate(),
+            message: this.newMessage,
+            status:'sent',
+          })
+          this.newMessage='';
+        },
+        newDate(){
+          const now= new Date();
+          const year=now.getFullYear();
+          const month=(now.getMonth()+1);
+          const day=now.getDay();
+          const hours=now.getHours();
+          const Minutes=now.getMinutes();
+          const seconds=now.getSeconds();
+          const today=`${day}/${month}/${year}`;
+          const time=`${hours}:${Minutes}:${seconds}`; 
+          const date=`${today}  ${time}`;
+          return date;
         }
     }
 });

@@ -73,7 +73,7 @@
             <!-- Text area -->
             <div class="text">
                 <i class="fa-regular fa-face-smile"></i>
-                <input type="text" name="" id="" placeholder="Scirvi un messaggio">
+                <input v-model.trim="newMessage" type="text" name="" id="" placeholder="Scirvi un messaggio" @keyup.enter="newMsg()">
                 <i class="fa-solid fa-microphone"></i>
             </div>
         </section>
