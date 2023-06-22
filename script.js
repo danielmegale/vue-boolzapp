@@ -225,7 +225,16 @@ const app=Vue.createApp({
               ],
             },
           newMessage:'',
+          filter:'',
         }
+    },
+    computed:{
+      filterName(){
+        const term=this.filter.toLowerCase();
+        return this.contacts.filter((contact)=>{
+          return contact.name.toLowerCase().includes(term)
+        });
+      }
     },
     methods:{
         currentChat(contact){

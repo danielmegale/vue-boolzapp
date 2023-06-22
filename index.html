@@ -38,11 +38,11 @@
             <!-- Searchbar -->
             <div class="searchbar">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" placeholder="Cerca o inizia una nuova chat">
+                <input v-model.trim="filter" type="text" placeholder="Cerca o inizia una nuova chat">
             </div>
             <!-- Contacts -->
             <div class="contacts">
-                <div v-for="contact in contacts" class="contact" @click="currentChat(contact)">
+                <div v-for="contact in filterName" class="contact" @click="currentChat(contact)">
                     <img :src=`img/avatar${contact.avatar}.jpg` alt="">
                     <p>{{contact.name}}</p>
                 </div>
