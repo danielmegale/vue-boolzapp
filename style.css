@@ -115,18 +115,21 @@ img{
     border-radius: 5px;
     max-width: 50%;
     position: relative;
+    min-width: 85px;
 }
 .sent{
     background-color:#D5F9BA;
+    justify-content: end;
 }
 .received{
     background-color:#fff ;
+    justify-content: start;
 }
 .date{
     position: absolute;
     bottom:0px;
     right:5px;
-    font-size: 10px;
+    font-size: 8px;
     color: gray;
     
 }

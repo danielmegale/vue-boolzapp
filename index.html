@@ -42,7 +42,7 @@
             </div>
             <!-- Contacts -->
             <div class="contacts">
-                <div v-for="(contact,i) in contacts" class="contact" @click="currentChat(contact)">
+                <div v-for="contact in contacts" class="contact" @click="currentChat(contact)">
                     <img :src=`img/avatar${contact.avatar}.jpg` alt="">
                     <p>{{contact.name}}</p>
                 </div>
@@ -55,7 +55,7 @@
                     <img :src=`img/avatar${currentContact.avatar}.jpg` alt="">
                     <div>
                         <p>{{currentContact.name}}</p>
-                        <p></p>
+                        <p>Ultimo accesso alle</p>
                     </div>
                 </div>
                 <div>
@@ -66,14 +66,8 @@
             </header>
             <!-- Main chat -->
             <div class="main-chat">
-                <div class="message right">
-                    <!-- <p class="sent"><span class="date"></span></p> -->
-                   
-                </div>
-                <div class="message left">
-                    <!-- <p class="received"><span class="date"></span></p> -->
-                   
-                    
+                <div v-for="message in currentContact.messages" class="message" :class="message.status==='sent'?'right': 'left'">
+                    <p :class="message.status">{{message.message}}<span class="date">{{message.date}}</span></p>
                 </div>
             </div>
             <!-- Text area -->

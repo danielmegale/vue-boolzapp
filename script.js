@@ -201,15 +201,36 @@ const app=Vue.createApp({
                 }
             ],
             currentContact:{
-                name: 'Michele',
-                avatar: '_1',
-              },
+              name: 'Michele',
+              avatar: '_1',
+              messages: [
+                {
+                  id: 1,
+                  date: '10/01/2020 15:30:55',
+                  message: 'Hai portato a spasso il cane?',
+                  status: 'sent'
+                },
+                {
+                  id: 2,
+                  date: '10/01/2020 15:50:00',
+                  message: 'Ricordati di stendere i panni',
+                  status: 'sent'
+                },
+                {
+                  id: 3,
+                  date: '10/01/2020 16:15:22',
+                  message: 'Tutto fatto!',
+                  status: 'received'
+                }
+              ],
+            },
         }
     },
     methods:{
         currentChat(contact){
             this.currentContact.name = contact.name;
             this.currentContact.avatar=contact.avatar;
+            this.currentContact.messages=contact.messages
         }
     }
 });
